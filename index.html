@@ -35,12 +35,7 @@
     </style>
 </head>
 <body>
-    <rw-slide-menu id="menu" theme="blue" backdrop="false">
-        <h1 slot="title">Title!</h1>
-        <a href="#">One</a>
-        <a href="#">Two</a>
-        <a href="#">Three</a>
-    </rw-slide-menu>
+    <rw-slide-menu id="menu"></rw-slide-menu>
     <div class="controls">
         <button class="btn" data-action="open">Open Menu</button>
         <button class="btn" data-action="close">Close Menu</button>
@@ -57,9 +52,6 @@
                     $menu.open = false;
                     break;
             }
-        });
-        $menu.addEventListener("click", (event) => {
-            console.log("MENU CLICKED:", event);
         });
         $menu.addEventListener("menu-opened", (event) => {
             console.log("MENU OPENED!", event);
