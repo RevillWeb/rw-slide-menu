@@ -70,13 +70,31 @@ class RwSlideMenu extends HTMLElement {
             .frame.open .container {
                 transform: none;
             }
+            .content-slot::slotted(a) {
+                display: block;
+                font-size: 1.2em;
+                text-decoration: none;
+                line-height: 2.5em;
+                padding: 0.5em;
+                border-bottom: solid 1px #F1F1F1;
+                color: #666;
+            }
+            .content-slot::slotted(a:hover) {
+                color: #000;
+            }
             :host([theme="red"]) .title {
                 background-color: #E23F24;
                 color: white;
             }
+            :host([theme="red"]) .content-slot::slotted(a:hover) {
+                color: #E23F24;
+            }
             :host([theme="blue"]) .title {
                 background-color: #0d152d;
                 color: white;
+            }
+            :host([theme="blue"]) .content-slot::slotted(a:hover) {
+                color: #0d152d;
             }
             :host([backdrop="false"]) .frame.open {
                 pointer-events: none;
